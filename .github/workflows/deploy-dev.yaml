@@ -43,4 +43,5 @@ jobs:
             IMAGE_TAG: 'latest'
         run: |
             docker build -t 746669223061.dkr.ecr.eu-north-1.amazonaws.com/obrazy-szkolenie .
-            docker push 746669223061.dkr.ecr.eu-north-1.amazonaws.com/obrazy-szkolenie
+            docker push 746669223061.dkr.ecr.eu-north-1.amazonaws.com/szkolenie-stack-backendrepository-gi3g6ed52pij
+          
