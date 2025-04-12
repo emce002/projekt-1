@@ -41,8 +41,8 @@ Resources:
           Image: !GetAtt BackendRepository.RepositoryUri
           Cpu: 1024
           PortMappings:
-            - ContainerPort: 3000
-              HostPort: 80
+            - ContainerPort: 8080
+              HostPort: 8080
               Protocol: tcp
           Memory: 3072
           Essential: true
