@@ -51,7 +51,7 @@ Resources:
     Type: 'AWS::ECS::Service'
     Properties:
       ServiceName: maciek-1-service
-      Cluster: maciek-cluster-name-1
+      Cluster: !Ref ECSCluster
       DesiredCount: 1
       LaunchType: FARGATE
       NetworkConfiguration:
@@ -62,7 +62,7 @@ Resources:
           Subnets:
             - subnet-0b17cc250d8d9d730
             - subnet-08f5b60f4836afd4b
-      TaskDefinition: container-maciek-1
+      TaskDefinition: !Ref BackendTaskDefinition
 
 Outputs:
   BackendRepositoryUri:
