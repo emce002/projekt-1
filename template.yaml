@@ -43,6 +43,8 @@ Resources:
               Protocol: tcp
           Memory: 3072
           Essential: true
+      RequiresCompatibilities:
+        - FARGATE
 
   ECSService:
     Type: 'AWS::ECS::Service'
