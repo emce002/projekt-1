@@ -11,6 +11,8 @@ COPY settings.gradle .
 # Copy source code
 COPY src src
 
+RUN chmod=+x ./gradlew
+
 # Build the application
 RUN ./gradlew build -x test
 
