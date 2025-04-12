@@ -1,3 +1,7 @@
+
+# definicja 1 pełnego środowiska aplikacji, wszystkie elementy potrzebe do uruchomienia aplikacji
+
+
 AWSTemplateFormatVersion: '2010-09-09'
 Transform: AWS::Serverless-2016-10-31
 Description: SAM Template for Astro project deployment with S3 and CloudFront (No custom domain)
