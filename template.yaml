@@ -33,6 +33,20 @@ Resources:
         ExecuteCommandConfiguration:
           Logging: DEFAULT
 
+  BackendTaskDefinition:
+    Type: AWS::ECS::TaskDefinition
+    Properties:
+      ContainerDefinitions:
+        - Name: container-maciek-1
+          Image: !GetAtt BackendRepository.RepositoryUri
+          Cpu: 1024
+          PortMappings:
+            - ContainerPort: 3000
+              HostPort: 80
+              Protocol: tcp
+          Memory: 3072
+          Essential: true
+
 Outputs:
   BackendRepositoryUri:
     Description: URI of the ECR repository
