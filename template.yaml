@@ -62,22 +62,22 @@ Resources:
         - 'arn:aws:iam::aws:policy/service-role/AmazonECSTaskExecutionRolePolicy'
 
 
-#  ECSService:
-#    Type: 'AWS::ECS::Service'
-#    Properties:
-#      ServiceName: maciek-1-service
-#      Cluster: !Ref ECSCluster
-#      DesiredCount: 1
-#      LaunchType: FARGATE
-#      NetworkConfiguration:
-#        AwsvpcConfiguration:
-#          AssignPublicIp: ENABLED
-#          SecurityGroups:
-#            - sg-0c32195644e09dc2f
-#          Subnets:
-#            - subnet-0b17cc250d8d9d730
-#            - subnet-08f5b60f4836afd4b
-#      TaskDefinition: !Ref BackendTaskDefinition
+  ECSService:
+    Type: 'AWS::ECS::Service'
+    Properties:
+      ServiceName: maciek-1-service
+      Cluster: !Ref ECSCluster
+      DesiredCount: 1
+      LaunchType: FARGATE
+      NetworkConfiguration:
+        AwsvpcConfiguration:
+          AssignPublicIp: ENABLED
+          SecurityGroups:
+            - sg-0c32195644e09dc2f
+          Subnets:
+            - subnet-0b17cc250d8d9d730
+            - subnet-08f5b60f4836afd4b
+      TaskDefinition: !Ref BackendTaskDefinition
 
 Outputs:
   BackendRepositoryUri:
