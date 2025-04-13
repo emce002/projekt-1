@@ -102,7 +102,7 @@ Resources:
       Protocol: HTTP
       TargetType: ip
       VpcId: vpc-036074a5823a1776f
-      HealthCheckPath: /
+      HealthCheckPath: /api/info
       HealthCheckIntervalSeconds: 30
       HealthCheckTimeoutSeconds: 5
       HealthyThresholdCount: 2
@@ -122,7 +122,7 @@ Resources:
     Type: AWS::EC2::SecurityGroup
     Properties:
       GroupDescription: Security group for the ALB
-      VpcId: VPC_ID
+      VpcId: vpc-036074a5823a1776f
       SecurityGroupIngress:
         - IpProtocol: tcp
           FromPort: 80
