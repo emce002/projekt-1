@@ -63,6 +63,7 @@ Resources:
 
   ECSService:
     Type: 'AWS::ECS::Service'
+    DependsOn: LoadBalancerListener
     Properties:
       ServiceName: maciek-1-service
       Cluster: !Ref ECSCluster
