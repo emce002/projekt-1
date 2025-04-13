@@ -36,16 +36,16 @@ Resources:
       ContainerDefinitions:
         - Name: container-maciek-1
           Image: !GetAtt BackendRepository.RepositoryUri
-          Cpu: 1024
           PortMappings:
             - ContainerPort: 8080
               HostPort: 8080
               Protocol: tcp
-          Memory: 3072
           Essential: true
       RequiresCompatibilities:
         - FARGATE
       NetworkMode: awsvpc
+      Cpu: 1024
+      Memory: 3072
 
   ECSService:
     Type: 'AWS::ECS::Service'
