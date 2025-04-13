@@ -90,8 +90,8 @@ Resources:
       SecurityGroups:
         - !Ref ALBSecurityGroup
       Subnets:
-        - SUBNET_1
-        - SUBNET_2
+        - subnet-0b17cc250d8d9d730
+        - subnet-08f5b60f4836afd4b
       Type: application
       IpAddressType: ipv4
 
@@ -101,7 +101,7 @@ Resources:
       Port: 8080
       Protocol: HTTP
       TargetType: ip
-      VpcId: VPC_ID
+      VpcId: vpc-036074a5823a1776f
       HealthCheckPath: /
       HealthCheckIntervalSeconds: 30
       HealthCheckTimeoutSeconds: 5
