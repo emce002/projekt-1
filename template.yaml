@@ -45,6 +45,7 @@ Resources:
           Essential: true
       RequiresCompatibilities:
         - FARGATE
+      NetworkMode: awsvpc
 
   ECSService:
     Type: 'AWS::ECS::Service'
